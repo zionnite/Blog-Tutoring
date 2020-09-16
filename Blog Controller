@@ -1,0 +1,55 @@
+<?php
+class Blog extends CI_Controller{
+    public function __construct(){
+        parent::__construct();
+    }
+    
+    public function index(){
+        echo 'Journal is now a Blog been called';
+    }
+    public function blog_details($id=NULL, $user_name=NULL){
+        echo $id.br().$user_name;
+    }
+    
+    public function upload(){
+        $data['alert']    =$this->session->flashdata('alert');;
+        $this->load->view('uploading_form',$data);
+    }
+    public function do_upload(){
+        if($this->input->post('submit')){
+            //perform the file uploading to server or to the directory
+            @mkdir('uploads');
+            
+            $config['upload_path']          = './uploads/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+//            $config['max_size']             = 100;
+//            $config['max_width']            = 1024;
+//            $config['max_height']           = 768;
+            $config['encrypt_name']           = TRUE;
+            
+            
+            $this->upload->initialize($config);
+            
+             if(!$this->upload->do_upload()){
+                $data['alert']    ='<div class="alert alert-danger">'.$this->upload->display_errors().'</div>';
+            
+                $this->session->set_flashdata('alert', $data['alert']);
+             }else{
+                $alert  ='<div class="alert alert-success">File Uploaded Successfully</div>';
+            
+                $this->session->set_flashdata('alert', $alert);
+                
+             }
+            
+            redirect('Blog/upload');
+
+        }else{
+            //redirect back to the upload form page
+            $alert  ='<div class="alert alert-danger">Use the Submit button to continue</div>';
+            
+            $this->session->set_flashdata('alert', $alert);
+            
+            redirect('Blog/upload');
+        }
+    }
+}
