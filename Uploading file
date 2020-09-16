@@ -1,0 +1,94 @@
+<html>
+    <head>
+    <title>Uploading Tut in Codeigniter</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    
+	<!-- Favicon icon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	
+	<!-- Bootstrap -->
+    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawsome -->
+    <link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Animate CSS-->
+    <link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet">
+    <!-- menu CSS-->
+    <link href="<?php echo base_url();?>assets/css/bootstrap-4-navbar.css" rel="stylesheet">	
+	<!-- Portfolio Gallery -->
+    <link href="<?php echo base_url();?>assets/css/filterizer.css" rel="stylesheet">
+	<!-- Lightbox Gallery -->
+    <link href="<?php echo base_url();?>assets/inc/lightbox/css/jquery.fancybox.css" rel="stylesheet">
+	<!-- OWL Carousel -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.theme.default.min.css">
+    <!-- Preloader CSS-->
+    <link href="<?php echo base_url();?>assets/css/fakeLoader.css" rel="stylesheet">
+	<!-- Main CSS -->
+    <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+    <!-- Default CSS Color --> 
+    <link href="<?php echo base_url();?>assets/color/default.css" rel="stylesheet">
+     <!-- Color CSS --> 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/color/color-switcher.css">
+    <!-- Default CSS Color --> 
+    <link href="<?php echo base_url();?>assets/color/default.css" rel="stylesheet">
+     <!-- Color CSS --> 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/color/color-switcher.css">
+	<!-- Responsive CSS -->
+    <link href="<?php echo base_url();?>assets/css/responsive.css" rel="stylesheet">
+
+
+  </head>
+    
+    <body>
+       <?php print_r($alert);?>
+        <form method="post" action="<?php echo base_url();?>Blog/do_upload" enctype="multipart/form-data">
+            <div class="col-md-12">
+                <input type="file" name="userfile" class="form-control" />
+            </div>
+            <input type="submit" class="btn btn-block btn-lg btn-danger" name="submit" value="Upload File Now" />
+        </form>
+        
+        
+        
+        
+        <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+
+	<!-- Wow Script -->
+	<script src="<?php echo base_url();?>assets/js/wow.min.js"></script>
+	<!-- Counter Script -->
+	<script src="<?php echo base_url();?>assets/js/waypoints.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/jquery.counterup.min.js"></script>
+	<!-- Masonry Portfolio Script -->
+    <script src="<?php echo base_url();?>assets/js/jquery.filterizr.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/filterizer-controls.js"></script>
+    <!-- OWL Carousel js-->
+	<script src="<?php echo base_url();?>assets/js/owl.carousel.min.js"></script>  
+	<!-- Lightbox js -->
+	<script src="<?php echo base_url();?>assets/inc/lightbox/js/jquery.fancybox.pack.js"></script>
+	<script src="<?php echo base_url();?>assets/inc/lightbox/js/lightbox.js"></script>
+	<!-- Google map js -->
+	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJnKEvlwpyjXfS_h-J1Cne2fPMqeb44Mk&amp;callback=initMap"></script>	
+	<script src="<?php echo base_url();?>assets/js/map.js"></script>
+	<!-- loader js-->
+    <script src="<?php echo base_url();?>assets/js/fakeLoader.min.js"></script>
+	<!-- Scroll bottom to top -->
+	<script src="<?php echo base_url();?>assets/js/scrolltopcontrol.js"></script>
+	<!-- menu -->
+	<script src="<?php echo base_url();?>assets/js/bootstrap-4-navbar.js"></script>    
+    <!-- Stiky menu -->
+	<script src="<?php echo base_url();?>assets/js/jquery.sticky.js"></script>  
+    <!-- youtube popup video -->
+	<script src="<?php echo base_url();?>assets/js/jquery.magnific-popup.min.js"></script>  
+    <!-- Color switcher js -->
+	<script src="<?php echo base_url();?>assets/js/color-switcher.js"></script> 
+    <!-- Color-switcher-active -->  
+    <script src="<?php echo base_url();?>assets/js/color-switcher-active.js"></script>      
+	<!-- Custom script -->
+    <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+    </body>
+</html>
